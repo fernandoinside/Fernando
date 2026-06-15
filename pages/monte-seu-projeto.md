@@ -27,7 +27,7 @@ description: "Configure sua ideia passo a passo e receba uma proposta preliminar
           {% if step.type == "textarea" %}
             <textarea name="{{ step.id }}" placeholder="{{ step.placeholder }}" required></textarea>
           
-          {% elif step.type == "checkbox" %}
+          {% elsif step.type == "checkbox" %}
             <div class="options-grid">
               {% for option in step.options %}
               <label class="option-item">
@@ -39,7 +39,7 @@ description: "Configure sua ideia passo a passo e receba uma proposta preliminar
               {% endfor %}
             </div>
 
-          {% elif step.type == "radio" %}
+          {% elsif step.type == "radio" %>
             <div class="options-grid">
               {% for option in step.options %}
               <label class="option-item">
@@ -51,7 +51,7 @@ description: "Configure sua ideia passo a passo e receba uma proposta preliminar
               {% endfor %}
             </div>
 
-          {% elif step.type == "select" %}
+          {% elsif step.type == "select" %}
             <select name="{{ step.id }}" required>
               <option value="" disabled selected>Selecione uma opção</option>
               {% for option in step.options %}
