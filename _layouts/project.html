@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<article class="project-detail container">
+  <header class="project-header">
+    <div class="project-meta">
+      <span class="project-status status-{{ page.status | default: 'disponivel' }}">{{ page.status | default: 'Disponível' | capitalize }}</span>
+      {% if page.category %}<span class="tag">{{ page.category }}</span>{% endif %}
+    </div>
+    <h1 class="project-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="project-subtitle">{{ page.subtitle }}</p>{% endif %}
+  </header>
+
+  {% if page.featured_image %}
+  <figure class="project-featured-image">
+    <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
+  </figure>
+  {% endif %}
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+
+  {% if page.pricing %}
+  <section class="project-pricing">
+    <h2>Modelos de Licenciamento</h2>
+    <div class="pricing-options">
+      {% for option in page.pricing %}
+      <div class="pricing-card">
+        <h3>{{ option.name }}</h3>
+        <div class="price">{{ option.price }}</div>
+        <ul class="features">
+          {% for feature in option.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        {% if option.mp_link %}
+          <a href="{{ option.mp_link }}" class="btn btn-primary" target="_blank">Adquirir Licença</a>
+        {% else %}
+          <a href="{{ site.contact_email | prepend: 'mailto:' }}?subject=Interesse%20em%20{{ page.title | url_encode }}%20-%20{{ option.name | url_encode }}" class="btn btn-primary">Solicitar Orçamento</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.demo_url != "" and page.demo_url or page.docs_url != "" and page.docs_url or page.repo_url != "" and page.repo_url %}
+  <section class="project-links">
+    {% if page.demo_url != "" and page.demo_url %}<a href="{{ page.demo_url }}" class="btn btn-secondary" target="_blank">Ver Demo Online</a>{% endif %}
+    {% if page.docs_url != "" and page.docs_url %}<a href="{{ page.docs_url }}" class="btn btn-secondary" target="_blank">Documentação Técnica</a>{% endif %}
+    {% if page.repo_url != "" and page.repo_url %}<a href="{{ page.repo_url }}" class="btn btn-secondary" target="_blank">Repositório Privado</a>{% endif %}
+  </section>
+  {% endif %}
+
+  <footer class="project-footer">
+    <div class="footer-card">
+      <p>Gostou deste projeto? <a href="{{ site.contact_email | prepend: 'mailto:' }}?subject=Interesse%20em%20{{ page.title | url_encode }}">Entre em contato</a> para discutir detalhes técnicos ou licenciamento.</p>
+    </div>
+  </footer>
+</article>

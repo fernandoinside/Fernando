@@ -1,0 +1,143 @@
+---
+layout: default
+---
+<header class="hero">
+  <div class="container hero-flex">
+    <div class="hero-content">
+      <div class="badge-new">⚡ Disponível para Projetos Críticos</div>
+      <h1>Engenharia de Software de <span class="text-gradient">Elite</span></h1>
+      <p class="hero-subtitle">Transformo ideias complexas em plataformas escaláveis. Especialista em IA, IoT, Segurança e Arquiteturas de Alta Disponibilidade.</p>
+      <div class="hero-btns">
+        <a href="{{ '/pages/monte-seu-projeto' | relative_url }}" class="btn btn-primary btn-lg">Monte seu Projeto</a>
+        <a href="#experiencia" class="btn btn-secondary btn-lg">Minha Trajetória</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Anos Exp.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Segurança</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-code">
+        <pre><code>{
+  "role": "Architect",
+  "focus": ["AI", "Security"],
+  "status": "Ready"
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="experiencia" class="home-section section-dark">
+  <div class="container">
+    <div class="section-header-centered">
+      <span class="section-tag">Expertise</span>
+      <h2>Domínio Técnico de Ponta a Ponta</h2>
+      <p>De scripts de automação cloud a orquestradores de IA, minha entrega é baseada em performance e robustez.</p>
+    </div>
+
+    <div class="expertise-grid">
+      {% for skill in site.data.skills_timeline limit:4 %}
+      <div class="expertise-card">
+        <span class="expertise-icon">{{ skill.icon }}</span>
+        <h3>{{ skill.title }}</h3>
+        <p>{{ skill.description | truncate: 100 }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="{{ '/pages/trajetoria' | relative_url }}" class="btn btn-outline">Ver Trajetória Completa</a>
+    </div>
+  </div>
+</section>
+
+<section id="produtos" class="home-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-tag">Portfólio</span>
+        <h2>Produtos Prontos</h2>
+      </div>
+      <p>SaaS, Marketplaces e Engines disponíveis para licenciamento imediato.</p>
+    </div>
+
+    <div class="projects-grid">
+    {% assign visible_projects = site.projects | where_exp: "project", "project.exclude_from_listing != true" %}
+    {% assign sorted_projects = visible_projects | sort: 'title' %}
+    {% for project in sorted_projects %}
+    <article class="project-card-new">
+      {% if project.featured_image %}
+      <div class="project-img-wrapper">
+        <img src="{{ project.featured_image | relative_url }}" alt="{{ project.title }}">
+        <div class="project-overlay">
+          <span class="btn btn-primary btn-sm">Ver Detalhes</span>
+        </div>
+      </div>
+      {% endif %}
+      <div class="project-info">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.subtitle | truncate: 80 }}</p>
+        <div class="project-tags">
+          {% for tech in project.tech_stack limit:3 %}
+          <span class="tag-small">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        <a href="{{ project.url | relative_url }}" class="project-link-overlay"></a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  </div>
+</section>
+
+<section id="servicos" class="home-section section-dark">
+  <div class="container">
+    <div class="section-header-centered">
+      <span class="section-tag">Business</span>
+      <h2>Consultoria e Serviços</h2>
+      <p>Segurança ofensiva, arquitetura cloud e desenvolvimento sob demanda.</p>
+    </div>
+
+    <div class="services-modern-grid">
+      {% for service in site.data.commercial.services %}
+      <div class="service-modern-card">
+        <div class="service-icon-bg">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <div class="service-plans">
+          {% for plan in service.plans %}
+          <div class="plan-mini">
+            <span>{{ plan.name }}</span>
+            <strong>{{ plan.price }}</strong>
+          </div>
+          {% endfor %}
+        </div>
+        <a href="{{ '/pages/contato' | relative_url }}" class="btn btn-primary btn-block">Solicitar Proposta</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="mega-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Pronto para escalar seu próximo grande projeto?</h2>
+      <p>Utilize o nosso construtor interativo para definir requisitos e receber um diagnóstico técnico preliminar em minutos.</p>
+      <div class="cta-btns">
+        <a href="{{ '/pages/monte-seu-projeto' | relative_url }}" class="btn btn-primary btn-lg">Iniciar Construtor de Projeto</a>
+        <a href="{{ '/pages/contato' | relative_url }}" class="btn btn-outline btn-lg">Agendar Consultoria</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+title: "Fernando Machado | Software Architect & Ethical Hacker"
+description: "Especialista em construir sistemas críticos, IA corporativa, IoT e segurança ofensiva. Soluções escaláveis de alta performance."
+url: "https://fernandoinside.github.io"
+baseurl: "/Portifolio-Produtos"
+lang: "pt-BR"
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /produtos/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      status: "disponivel"
+      published: true
+      exclude_from_listing: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+
+# Social/Contact
+contact_email: "fernando.inside@gmail.com"
+github_username: "fernandoinside"
+linkedin_username: "fernando-machado-dos-santos-7610b987"

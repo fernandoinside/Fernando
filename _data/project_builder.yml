@@ -1,0 +1,63 @@
+steps:
+  - id: objective
+    title: Qual o seu objetivo?
+    description: Descreva o que você deseja alcançar com este projeto.
+    type: textarea
+    placeholder: "Ex: Criar uma plataforma de monitoramento de ativos em tempo real..."
+  - id: stack
+    title: Tecnologias de Preferência
+    description: Selecione as tecnologias que você imagina para o projeto.
+    type: checkbox
+    options:
+      - label: Python / FastAPI
+        value: python
+      - label: Node.js / TypeScript
+        value: nodejs
+      - label: React / Next.js
+        value: react
+      - label: Mobile (Flutter/React Native)
+        value: mobile
+      - label: Cloud (AWS/Azure/GCP)
+        value: cloud
+  - id: features
+    title: Funcionalidades e Especialidades
+    description: Quais pilares tecnológicos o projeto envolve?
+    type: checkbox
+    options:
+      - label: Inteligência Artificial (LLMs)
+        value: llm
+      - label: Automações de Processos
+        value: automation
+      - label: Internet das Coisas (IoT)
+        value: iot
+      - label: Segurança e Pentest
+        value: security
+      - label: Infraestrutura / DevOps
+        value: devops
+  - id: model
+    title: Modelo de Aquisição
+    description: Como você prefere estruturar a parceria?
+    type: radio
+    options:
+      - label: Desenvolvimento Sob Demanda (Compra)
+        value: buy
+      - label: SaaS / Locação Mensal
+        value: rent
+      - label: Consultoria Estratégica
+        value: consulting
+  - id: timeline
+    title: Prazo Estimado
+    description: Qual a sua urgência para o MVP ou versão final?
+    type: select
+    options:
+      - label: Extrema Urgência (até 1 mês)
+        value: 1month
+      - label: Padrão (2 a 3 meses)
+        value: 3months
+      - label: Longo Prazo (6 meses+)
+        value: 6months
+  - id: budget
+    title: Necessidades e Complexidade
+    description: Fale um pouco mais sobre requisitos específicos.
+    type: textarea
+    placeholder: "Ex: Precisa integrar com SAP, suporte a 10k usuários simultâneos..."

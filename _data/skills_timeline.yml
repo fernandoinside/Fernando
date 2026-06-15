@@ -1,0 +1,70 @@
+- category: Inteligência Artificial
+  icon: "🤖"
+  title: Orquestrador de Agentes de IA
+  description: Desenvolvimento de sistema complexo para gestão e orquestração de múltiplos agentes de IA para rotinas automatizadas.
+  tags: [IA, Automação, Agentes]
+- category: Inteligência Artificial
+  icon: "🧠"
+  title: LLM com RAG Corporativo
+  description: Implementação de Large Language Models com Retrieval-Augmented Generation para foco exclusivo em dados privados empresariais.
+  tags: [LLM, RAG, Python]
+- category: Internet of Things (IoT)
+  icon: "📟"
+  title: Hardwares para Automação
+  description: Criação de hardware proprietário utilizando Arduino, Raspberry Pi e rastreadores, com integração total a plataformas Web/App.
+  tags: [IoT, Hardware, Arduino, Raspberry]
+- category: Segurança e OSINT
+  icon: "🛡️"
+  title: Kali Linux Interface (Armitage Style)
+  description: Interface customizada para auxiliar ferramentas do Kali Linux, otimizando o fluxo de trabalho de Pentest.
+  tags: [Cybersecurity, Kali, Linux]
+- category: Segurança e OSINT
+  icon: "🔍"
+  title: Plataformas de OSINT
+  description: Desenvolvimento de aplicações para Open Source Intelligence, coleta e análise de dados públicos.
+  tags: [OSINT, Security, Data]
+- category: Mobilidade e Logística
+  icon: "🚗"
+  title: Aplicativos de Mobilidade (Uber-like)
+  description: Desenvolvimento completo de ecossistemas de transporte, incluindo App de motorista, passageiro e painel administrativo.
+  tags: [Mobile, Geolocalização, Escalabilidade]
+- category: Mobilidade e Logística
+  icon: "✈️"
+  title: Sistemas de Aviação
+  description: Criação de aplicações especializadas para o setor aeroespacial e gestão de voos.
+  tags: [Aviation, Tech]
+- category: Mobilidade e Logística
+  icon: "🚚"
+  title: Gestão de Frotas
+  description: Plataforma completa para controle, rastreamento e manutenção de frotas comerciais.
+  tags: [Logistics, Fleet Management]
+- category: Gaming e Simulação
+  icon: "🎰"
+  title: Plataformas de Cassino Online
+  description: Desenvolvimento de engines de jogos, sistemas de apostas e gestão de usuários em tempo real.
+  tags: [Gaming, High Traffic, Real-time]
+- category: Gaming e Simulação
+  icon: "🏢"
+  title: Escritório Virtual (IA Workers)
+  description: Jogo de simulação onde agentes de IA atuam como funcionários em um ambiente corporativo virtual.
+  tags: [Simulation, IA, GameDev]
+- category: Infraestrutura e Cloud
+  icon: "☁️"
+  title: Automação Cloud & VPS
+  description: Scripts avançados para provisionamento, gestão de ambientes Cloud e domínio completo de arquiteturas VPS.
+  tags: [DevOps, Cloud, VPS]
+- category: Engenharia de Hardware
+  icon: "🖨️"
+  title: Impressoras 3D Proprietárias
+  description: Projeto e construção de hardware para impressão 3D customizada.
+  tags: [Hardware, 3D Printing]
+- category: Engenharia de Hardware
+  icon: "🎙️"
+  title: Assistente Virtual (Alexa-like)
+  description: Criação de hardware e software para assistente de voz inteligente.
+  tags: [Voice UI, IA, Electronics]
+- category: Sistemas Corporativos
+  icon: "📊"
+  title: ERP, CMS & Marketplaces
+  description: Desenvolvimento de sistemas de gestão, gerenciadores de conteúdo e ecossistemas complexos de marketplace.
+  tags: [Business, Web, Scale]

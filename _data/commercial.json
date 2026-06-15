@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": "consultoria-ti",
+      "title": "Consultoria TI Especializada",
+      "description": "Arquitetura de sistemas, otimização de infraestrutura e gestão de projetos.",
+      "icon": "🛠️",
+      "plans": [
+        {
+          "name": "Hora Avulsa",
+          "price": "R$ 250,00",
+          "link": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=2913001303-ab6000e6-0722-47ed-a7b6-1e930654cef0"
+        },
+        {
+          "name": "Pacote 10h",
+          "price": "R$ 2.000,00",
+          "link": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=2913001303-9fe39573-ab60-49c0-82c1-2021605e0a23"
+        }
+      ]
+    },
+    {
+      "id": "hacker-etico",
+      "title": "Pentest & Hacker Ético",
+      "description": "Auditoria de segurança, análise de vulnerabilidades e hardening de servidores.",
+      "icon": "🛡️",
+      "plans": [
+        {
+          "name": "Análise Express",
+          "price": "R$ 1.500,00",
+          "link": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=2913001303-3feac1b3-7592-488c-8f9b-6a3a82c6465d"
+        },
+        {
+          "name": "Pentest Completo",
+          "price": "R$ 5.000,00",
+          "link": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=2913001303-25ecc5d7-595d-4f0f-ab8b-ac80767ba8d6"
+        }
+      ]
+    }
+  ],
+  "project_pricing_models": {
+    "subscription": {
+      "name": "Assinatura (Mensal)",
+      "label": "Assinar",
+      "description": "Acesso contínuo, atualizações e suporte incluso."
+    },
+    "lifetime": {
+      "name": "Compra (Licença Vitalícia)",
+      "label": "Comprar Agora",
+      "description": "Pagamento único, código-fonte completo e propriedade da licença."
+    }
+  }
+}
